@@ -1,0 +1,9 @@
+[submodule "octokit.objc"]
+	path = octokit.objc
+	url = https://github.com/Benjamin-Dobell/octokit.objc.git
+[submodule "SocketRocket"]
+	path = SocketRocket
+	url = https://github.com/square/SocketRocket.git
+[submodule "GERazerKit"]
+	path = GERazerKit
+	url = https://github.com/Benjamin-Dobell/GERazerKit.git

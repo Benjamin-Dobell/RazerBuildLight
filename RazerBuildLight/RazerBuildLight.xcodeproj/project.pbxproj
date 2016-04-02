@@ -1,0 +1,501 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		17C8B01D9A5B9BF4F9AFE89A /* ProjectBuildList.m in Sources */ = {isa = PBXBuildFile; fileRef = 17C8B30110449FDE571F5451 /* ProjectBuildList.m */; };
+		17C8B07062BD63FB5EB6C97F /* ProjectBuild.m in Sources */ = {isa = PBXBuildFile; fileRef = 17C8B0C70B95C3EE25668F17 /* ProjectBuild.m */; };
+		17C8B0DCAAD92DD788E86416 /* ConfigurationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 17C8BC74D3D4DC021B6749C6 /* ConfigurationViewController.m */; };
+		17C8B2DD835A42E5C6389B52 /* NSTableCellView+RACSignalSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = 17C8B92072DD3869B9FB2060 /* NSTableCellView+RACSignalSupport.m */; };
+		17C8B3C4A7AD6CB29ECA42AC /* SelectProjectWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17C8BC3E06E3C4C0ED52AC2E /* SelectProjectWindow.xib */; };
+		17C8B4299E9141724948D001 /* SelectProjectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 17C8B278C0909555DAF59A50 /* SelectProjectViewController.m */; };
+		17C8B4362A8E4E666BE58419 /* Configuration.m in Sources */ = {isa = PBXBuildFile; fileRef = 17C8BC5AB24DD011821659B0 /* Configuration.m */; };
+		17C8B43DE3E5D456D14B80F5 /* WebHookManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 17C8B9640FA90FFB5914223E /* WebHookManager.m */; };
+		17C8B6B945835961AAADF886 /* MainRunLoopScheduler.m in Sources */ = {isa = PBXBuildFile; fileRef = 17C8BD6482DBF240963F9179 /* MainRunLoopScheduler.m */; };
+		17C8B7B925179404041EDD4A /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17C8BA728C8A70D7CCE322D4 /* MainWindow.xib */; };
+		17C8B7E9A43757AA4868AD3B /* ProjectBuildViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 17C8B89946E3C9A68587E3F7 /* ProjectBuildViewModel.m */; };
+		17C8B84ECC7EA7DDCD25001B /* ProjectBuildListViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 17C8BA0E34D759BD2A31FCD0 /* ProjectBuildListViewModel.m */; };
+		17C8BB8883BB054D8ED13FB1 /* SwizzleHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 17C8B1964643AA44100531AC /* SwizzleHelper.m */; };
+		17C8BE33DDAE7265E32D9A02 /* ConfigurationViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 17C8B3C644C4708CF3869D40 /* ConfigurationViewModel.m */; };
+		17C8BF634FF2E070DFBDA27D /* ChromaManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 17C8BE26B47F0D9646DACBC8 /* ChromaManager.m */; };
+		B552C0DB1C89E72A00E91F46 /* OctoKit.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = B552C0DA1C89E72A00E91F46 /* OctoKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B552C0DD1C89E74900E91F46 /* GERazerKit.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = B552C0DC1C89E74900E91F46 /* GERazerKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B552C0DE1C89E77700E91F46 /* GERazerKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B552C0DC1C89E74900E91F46 /* GERazerKit.framework */; };
+		B552C0DF1C89E77B00E91F46 /* OctoKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B552C0DA1C89E72A00E91F46 /* OctoKit.framework */; };
+		B552C0F11C89E9AE00E91F46 /* Mantle.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = B552C0F01C89E9AE00E91F46 /* Mantle.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B552C0F21C89E9B000E91F46 /* Mantle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B552C0F01C89E9AE00E91F46 /* Mantle.framework */; };
+		B552C0F41C89E9B600E91F46 /* ReactiveCocoa.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = B552C0F31C89E9B600E91F46 /* ReactiveCocoa.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B552C0F51C89E9B700E91F46 /* ReactiveCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B552C0F31C89E9B600E91F46 /* ReactiveCocoa.framework */; };
+		B552C0F71C89E9C100E91F46 /* AFNetworking.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = B552C0F61C89E9C100E91F46 /* AFNetworking.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B552C0F81C89E9C200E91F46 /* AFNetworking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B552C0F61C89E9C100E91F46 /* AFNetworking.framework */; };
+		B552C0FA1C89E9C700E91F46 /* ISO8601DateFormatter.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = B552C0F91C89E9C700E91F46 /* ISO8601DateFormatter.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B552C0FB1C89E9DA00E91F46 /* ISO8601DateFormatter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B552C0F91C89E9C700E91F46 /* ISO8601DateFormatter.framework */; };
+		B57CD9E81C8F59A1003B13A1 /* SocketRocket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B57CD9E71C8F59A1003B13A1 /* SocketRocket.framework */; };
+		B57CD9E91C8F59BB003B13A1 /* SocketRocket.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = B57CD9E71C8F59A1003B13A1 /* SocketRocket.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B5CFF3411C79941000A219FC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B5CFF3401C79941000A219FC /* AppDelegate.m */; };
+		B5CFF3441C79941000A219FC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B5CFF3431C79941000A219FC /* main.m */; };
+		B5CFF3461C79941000A219FC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B5CFF3451C79941000A219FC /* Assets.xcassets */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		B552C0D91C89E70000E91F46 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				B552C0F11C89E9AE00E91F46 /* Mantle.framework in CopyFiles */,
+				B552C0F41C89E9B600E91F46 /* ReactiveCocoa.framework in CopyFiles */,
+				B552C0F71C89E9C100E91F46 /* AFNetworking.framework in CopyFiles */,
+				B552C0FA1C89E9C700E91F46 /* ISO8601DateFormatter.framework in CopyFiles */,
+				B552C0DB1C89E72A00E91F46 /* OctoKit.framework in CopyFiles */,
+				B552C0DD1C89E74900E91F46 /* GERazerKit.framework in CopyFiles */,
+				B57CD9E91C8F59BB003B13A1 /* SocketRocket.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		17C8B0C70B95C3EE25668F17 /* ProjectBuild.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProjectBuild.m; sourceTree = "<group>"; };
+		17C8B1964643AA44100531AC /* SwizzleHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwizzleHelper.m; sourceTree = "<group>"; };
+		17C8B1B1CA4BBE8085DF76C6 /* SwizzleHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwizzleHelper.h; sourceTree = "<group>"; };
+		17C8B278C0909555DAF59A50 /* SelectProjectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectProjectViewController.m; sourceTree = "<group>"; };
+		17C8B29F23446BD8F076AE77 /* ProjectBuild.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProjectBuild.h; sourceTree = "<group>"; };
+		17C8B30110449FDE571F5451 /* ProjectBuildList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProjectBuildList.m; sourceTree = "<group>"; };
+		17C8B3175D030D044F23E587 /* Configuration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Configuration.h; sourceTree = "<group>"; };
+		17C8B3C644C4708CF3869D40 /* ConfigurationViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConfigurationViewModel.m; sourceTree = "<group>"; };
+		17C8B3F4819C0B91EBA3AF20 /* ConfigurationViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConfigurationViewModel.h; sourceTree = "<group>"; };
+		17C8B5D23669671C184A4E2A /* WebHookManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebHookManager.h; sourceTree = "<group>"; };
+		17C8B89946E3C9A68587E3F7 /* ProjectBuildViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProjectBuildViewModel.m; sourceTree = "<group>"; };
+		17C8B92072DD3869B9FB2060 /* NSTableCellView+RACSignalSupport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSTableCellView+RACSignalSupport.m"; sourceTree = "<group>"; };
+		17C8B9591EE9640B07E1B143 /* ProjectBuildViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProjectBuildViewModel.h; sourceTree = "<group>"; };
+		17C8B9640FA90FFB5914223E /* WebHookManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebHookManager.m; sourceTree = "<group>"; };
+		17C8BA0E34D759BD2A31FCD0 /* ProjectBuildListViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProjectBuildListViewModel.m; sourceTree = "<group>"; };
+		17C8BB55A0AC2FF0621B5BB8 /* MainRunLoopScheduler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainRunLoopScheduler.h; sourceTree = "<group>"; };
+		17C8BBB17A8EB5BA2E92420C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = RazerBuildLight/Base.lproj/MainWindow.xib; sourceTree = SOURCE_ROOT; };
+		17C8BBB38F021BA2BA9F2560 /* SelectProjectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectProjectViewController.h; sourceTree = "<group>"; };
+		17C8BBF7638B4397CF77FA3A /* ProjectBuildList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProjectBuildList.h; sourceTree = "<group>"; };
+		17C8BC3E06E3C4C0ED52AC2E /* SelectProjectWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SelectProjectWindow.xib; sourceTree = "<group>"; };
+		17C8BC5AB24DD011821659B0 /* Configuration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Configuration.m; sourceTree = "<group>"; };
+		17C8BC74D3D4DC021B6749C6 /* ConfigurationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConfigurationViewController.m; sourceTree = "<group>"; };
+		17C8BD6482DBF240963F9179 /* MainRunLoopScheduler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainRunLoopScheduler.m; sourceTree = "<group>"; };
+		17C8BD74B7C9ECCFD2F0B4B3 /* ConfigurationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConfigurationViewController.h; sourceTree = "<group>"; };
+		17C8BD976E5E9FE7DAF7288D /* ProjectBuildListViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProjectBuildListViewModel.h; sourceTree = "<group>"; };
+		17C8BE0E1F453A33D77A470F /* NSTableCellView+RACSignalSupport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSTableCellView+RACSignalSupport.h"; sourceTree = "<group>"; };
+		17C8BE1D88BF5715F99973D8 /* ChromaManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChromaManager.h; sourceTree = "<group>"; };
+		17C8BE26B47F0D9646DACBC8 /* ChromaManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChromaManager.m; sourceTree = "<group>"; };
+		B552C0DA1C89E72A00E91F46 /* OctoKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = OctoKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B552C0DC1C89E74900E91F46 /* GERazerKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = GERazerKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B552C0F01C89E9AE00E91F46 /* Mantle.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Mantle.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B552C0F31C89E9B600E91F46 /* ReactiveCocoa.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ReactiveCocoa.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B552C0F61C89E9C100E91F46 /* AFNetworking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AFNetworking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B552C0F91C89E9C700E91F46 /* ISO8601DateFormatter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ISO8601DateFormatter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B57CD9E71C8F59A1003B13A1 /* SocketRocket.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SocketRocket.framework; sourceTree = "<group>"; };
+		B5CFF33C1C79941000A219FC /* Razer Build Light.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Razer Build Light.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B5CFF33F1C79941000A219FC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		B5CFF3401C79941000A219FC /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		B5CFF3431C79941000A219FC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		B5CFF3451C79941000A219FC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B5CFF34A1C79941000A219FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B5CFF3391C79941000A219FC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B552C0F21C89E9B000E91F46 /* Mantle.framework in Frameworks */,
+				B552C0F51C89E9B700E91F46 /* ReactiveCocoa.framework in Frameworks */,
+				B57CD9E81C8F59A1003B13A1 /* SocketRocket.framework in Frameworks */,
+				B552C0F81C89E9C200E91F46 /* AFNetworking.framework in Frameworks */,
+				B552C0FB1C89E9DA00E91F46 /* ISO8601DateFormatter.framework in Frameworks */,
+				B552C0DF1C89E77B00E91F46 /* OctoKit.framework in Frameworks */,
+				B552C0DE1C89E77700E91F46 /* GERazerKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		17C8B052B8F569BAA6BABD8D /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				17C8B1B1CA4BBE8085DF76C6 /* SwizzleHelper.h */,
+				17C8B1964643AA44100531AC /* SwizzleHelper.m */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		17C8B1B3DAF2C0992BEE0B90 /* Chroma */ = {
+			isa = PBXGroup;
+			children = (
+				17C8BE26B47F0D9646DACBC8 /* ChromaManager.m */,
+				17C8BE1D88BF5715F99973D8 /* ChromaManager.h */,
+			);
+			path = Chroma;
+			sourceTree = "<group>";
+		};
+		17C8B653DE68B09EEDDA5E43 /* WebHooks */ = {
+			isa = PBXGroup;
+			children = (
+				17C8B5D23669671C184A4E2A /* WebHookManager.h */,
+				17C8B9640FA90FFB5914223E /* WebHookManager.m */,
+			);
+			path = WebHooks;
+			sourceTree = "<group>";
+		};
+		17C8B898192006E4C36DC11B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				17C8BD74B7C9ECCFD2F0B4B3 /* ConfigurationViewController.h */,
+				17C8B278C0909555DAF59A50 /* SelectProjectViewController.m */,
+				17C8BBB38F021BA2BA9F2560 /* SelectProjectViewController.h */,
+				17C8BC74D3D4DC021B6749C6 /* ConfigurationViewController.m */,
+				17C8BA728C8A70D7CCE322D4 /* MainWindow.xib */,
+				17C8BC3E06E3C4C0ED52AC2E /* SelectProjectWindow.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		17C8B8FC4CF996E3373ACE8E /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				17C8B89946E3C9A68587E3F7 /* ProjectBuildViewModel.m */,
+				17C8B9591EE9640B07E1B143 /* ProjectBuildViewModel.h */,
+				17C8BA0E34D759BD2A31FCD0 /* ProjectBuildListViewModel.m */,
+				17C8BD976E5E9FE7DAF7288D /* ProjectBuildListViewModel.h */,
+				17C8B3C644C4708CF3869D40 /* ConfigurationViewModel.m */,
+				17C8B3F4819C0B91EBA3AF20 /* ConfigurationViewModel.h */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		17C8B9465F6913A76452B5D3 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				17C8B29F23446BD8F076AE77 /* ProjectBuild.h */,
+				17C8B0C70B95C3EE25668F17 /* ProjectBuild.m */,
+				17C8B3175D030D044F23E587 /* Configuration.h */,
+				17C8BC5AB24DD011821659B0 /* Configuration.m */,
+				17C8BBF7638B4397CF77FA3A /* ProjectBuildList.h */,
+				17C8B30110449FDE571F5451 /* ProjectBuildList.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		17C8BD5F1A6E81D3481E9227 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				17C8B92072DD3869B9FB2060 /* NSTableCellView+RACSignalSupport.m */,
+				17C8BE0E1F453A33D77A470F /* NSTableCellView+RACSignalSupport.h */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
+		17C8BF7AE11DC2B9617CDBB9 /* ReactiveCocoa */ = {
+			isa = PBXGroup;
+			children = (
+				17C8BB55A0AC2FF0621B5BB8 /* MainRunLoopScheduler.h */,
+				17C8BD6482DBF240963F9179 /* MainRunLoopScheduler.m */,
+			);
+			path = ReactiveCocoa;
+			sourceTree = "<group>";
+		};
+		B5CFF3331C79941000A219FC = {
+			isa = PBXGroup;
+			children = (
+				B57CD9E71C8F59A1003B13A1 /* SocketRocket.framework */,
+				B552C0F91C89E9C700E91F46 /* ISO8601DateFormatter.framework */,
+				B552C0F61C89E9C100E91F46 /* AFNetworking.framework */,
+				B552C0F31C89E9B600E91F46 /* ReactiveCocoa.framework */,
+				B552C0F01C89E9AE00E91F46 /* Mantle.framework */,
+				B552C0DC1C89E74900E91F46 /* GERazerKit.framework */,
+				B552C0DA1C89E72A00E91F46 /* OctoKit.framework */,
+				B5CFF33E1C79941000A219FC /* RazerBuildLight */,
+				B5CFF33D1C79941000A219FC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B5CFF33D1C79941000A219FC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B5CFF33C1C79941000A219FC /* Razer Build Light.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B5CFF33E1C79941000A219FC /* RazerBuildLight */ = {
+			isa = PBXGroup;
+			children = (
+				B5CFF33F1C79941000A219FC /* AppDelegate.h */,
+				B5CFF3401C79941000A219FC /* AppDelegate.m */,
+				B5CFF3451C79941000A219FC /* Assets.xcassets */,
+				B5CFF34A1C79941000A219FC /* Info.plist */,
+				B5CFF3421C79941000A219FC /* Supporting Files */,
+				17C8B8FC4CF996E3373ACE8E /* ViewModels */,
+				17C8B9465F6913A76452B5D3 /* Models */,
+				17C8B898192006E4C36DC11B /* Views */,
+				17C8BD5F1A6E81D3481E9227 /* Categories */,
+				17C8BF7AE11DC2B9617CDBB9 /* ReactiveCocoa */,
+				17C8B052B8F569BAA6BABD8D /* Utilities */,
+				17C8B653DE68B09EEDDA5E43 /* WebHooks */,
+				17C8B1B3DAF2C0992BEE0B90 /* Chroma */,
+			);
+			path = RazerBuildLight;
+			sourceTree = "<group>";
+		};
+		B5CFF3421C79941000A219FC /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B5CFF3431C79941000A219FC /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B5CFF33B1C79941000A219FC /* Razer Build Light */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B5CFF34D1C79941000A219FC /* Build configuration list for PBXNativeTarget "Razer Build Light" */;
+			buildPhases = (
+				B5CFF3381C79941000A219FC /* Sources */,
+				B5CFF3391C79941000A219FC /* Frameworks */,
+				B5CFF33A1C79941000A219FC /* Resources */,
+				B552C0D91C89E70000E91F46 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Razer Build Light";
+			productName = RazerBuildLight;
+			productReference = B5CFF33C1C79941000A219FC /* Razer Build Light.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B5CFF3341C79941000A219FC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = "Glass Echidna Pty Ltd";
+				TargetAttributes = {
+					B5CFF33B1C79941000A219FC = {
+						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = QUKQK3GKXK;
+					};
+				};
+			};
+			buildConfigurationList = B5CFF3371C79941000A219FC /* Build configuration list for PBXProject "RazerBuildLight" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B5CFF3331C79941000A219FC;
+			productRefGroup = B5CFF33D1C79941000A219FC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B5CFF33B1C79941000A219FC /* Razer Build Light */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B5CFF33A1C79941000A219FC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B5CFF3461C79941000A219FC /* Assets.xcassets in Resources */,
+				17C8B7B925179404041EDD4A /* MainWindow.xib in Resources */,
+				17C8B3C4A7AD6CB29ECA42AC /* SelectProjectWindow.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B5CFF3381C79941000A219FC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B5CFF3441C79941000A219FC /* main.m in Sources */,
+				B5CFF3411C79941000A219FC /* AppDelegate.m in Sources */,
+				17C8B7E9A43757AA4868AD3B /* ProjectBuildViewModel.m in Sources */,
+				17C8B84ECC7EA7DDCD25001B /* ProjectBuildListViewModel.m in Sources */,
+				17C8B2DD835A42E5C6389B52 /* NSTableCellView+RACSignalSupport.m in Sources */,
+				17C8B4299E9141724948D001 /* SelectProjectViewController.m in Sources */,
+				17C8B0DCAAD92DD788E86416 /* ConfigurationViewController.m in Sources */,
+				17C8B07062BD63FB5EB6C97F /* ProjectBuild.m in Sources */,
+				17C8B4362A8E4E666BE58419 /* Configuration.m in Sources */,
+				17C8BE33DDAE7265E32D9A02 /* ConfigurationViewModel.m in Sources */,
+				17C8B01D9A5B9BF4F9AFE89A /* ProjectBuildList.m in Sources */,
+				17C8B6B945835961AAADF886 /* MainRunLoopScheduler.m in Sources */,
+				17C8BB8883BB054D8ED13FB1 /* SwizzleHelper.m in Sources */,
+				17C8B43DE3E5D456D14B80F5 /* WebHookManager.m in Sources */,
+				17C8BF634FF2E070DFBDA27D /* ChromaManager.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		17C8BA728C8A70D7CCE322D4 /* MainWindow.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				17C8BBB17A8EB5BA2E92420C /* Base */,
+			);
+			name = MainWindow.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B5CFF34B1C79941000A219FC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		B5CFF34C1C79941000A219FC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		B5CFF34E1C79941000A219FC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Developer ID Application";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = RazerBuildLight/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = au.com.glassechidna.RazerBuildLight;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		B5CFF34F1C79941000A219FC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Developer ID Application";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = RazerBuildLight/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = au.com.glassechidna.RazerBuildLight;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B5CFF3371C79941000A219FC /* Build configuration list for PBXProject "RazerBuildLight" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B5CFF34B1C79941000A219FC /* Debug */,
+				B5CFF34C1C79941000A219FC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B5CFF34D1C79941000A219FC /* Build configuration list for PBXNativeTarget "Razer Build Light" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B5CFF34E1C79941000A219FC /* Debug */,
+				B5CFF34F1C79941000A219FC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B5CFF3341C79941000A219FC /* Project object */;
+}

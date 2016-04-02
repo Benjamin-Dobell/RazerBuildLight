@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <FileRef
+      location = "group:SocketRocket/SocketRocket.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:octokit.objc/Carthage/Checkouts/Mantle/Mantle.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:octokit.objc/Carthage/Checkouts/ReactiveCocoa/ReactiveCocoa.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:octokit.objc/External/OctoKitDependencies/OctoKitDependencies.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:octokit.objc/OctoKit.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:GERazerKit/GERazerKit.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:RazerBuildLight/RazerBuildLight.xcodeproj">
+   </FileRef>
+</Workspace>
