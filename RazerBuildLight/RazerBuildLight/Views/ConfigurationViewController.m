@@ -107,10 +107,15 @@
 
 	[[[RACSignal merge:@[
 		[[self projectBuildListViewModel] projectBuildAdded],
-		[[self projectBuildListViewModel] projectBuildRemoved],
-		[[self projectBuildListViewModel] projectBuildChanged],
+		[[self projectBuildListViewModel] projectBuildRemoved]
 	]] deliverOn:[RACScheduler mainThreadScheduler]] subscribeNext:^(id x) {
 		[[weak_self tableView] reloadData];
+	}];
+
+	[[[[self projectBuildListViewModel] projectBuildChangedAtIndex] deliverOn:[RACScheduler mainThreadScheduler]] subscribeNext:^(RACTuple *tuple) {
+		NSUInteger rowIndex = [[tuple last] unsignedIntegerValue];
+		NSIndexSet *allColumns = [NSIndexSet indexSetWithIndexesInRange:NSMakeRange(0, 2)];
+		[[weak_self tableView] reloadDataForRowIndexes:[NSIndexSet indexSetWithIndex:rowIndex] columnIndexes:allColumns];
 	}];
 
 	[[[self configurationViewModel] aggregatedStatus] subscribeNext:^(NSString *status) {

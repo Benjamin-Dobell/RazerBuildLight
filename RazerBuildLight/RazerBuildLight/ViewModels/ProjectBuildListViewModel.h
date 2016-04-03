@@ -17,6 +17,8 @@
 
 - (RACSignal *)projectBuildChanged;
 
+- (RACSignal *)projectBuildChangedAtIndex;
+
 - (instancetype)init;
 
 - (instancetype)initWithProjectBuildList:(ProjectBuildList *)projectBuildList;

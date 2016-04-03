@@ -33,6 +33,11 @@
 	return [[self projectBuildList] projectBuildChanged];
 }
 
+- (RACSignal *)projectBuildChangedAtIndex
+{
+	return [[self projectBuildList] projectBuildChangedAtIndex];
+}
+
 - (instancetype)init
 {
 	return [self initWithProjectBuildList:[[ProjectBuildList alloc] init]];
