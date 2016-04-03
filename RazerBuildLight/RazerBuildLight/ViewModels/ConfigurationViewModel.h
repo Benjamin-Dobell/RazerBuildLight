@@ -12,6 +12,8 @@
 
 @interface ConfigurationViewModel : NSObject
 
+- (RACSignal *)aggregatedStatus;
+
 - (ProjectBuildListViewModel *)projectBuildListViewModel;
 
 @end

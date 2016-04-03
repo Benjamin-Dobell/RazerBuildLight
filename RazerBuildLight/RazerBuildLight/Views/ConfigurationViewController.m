@@ -11,6 +11,7 @@
 #import "ConfigurationViewModel.h"
 #import "MainRunLoopScheduler.h"
 #import "SelectProjectViewController.h"
+#import "ChromaManager.h"
 
 @interface ConfigurationViewController () <NSTableViewDataSource, NSTableViewDelegate, NSWindowDelegate>
 
@@ -110,6 +111,32 @@
 		[[self projectBuildListViewModel] projectBuildChanged],
 	]] deliverOn:[RACScheduler mainThreadScheduler]] subscribeNext:^(id x) {
 		[[weak_self tableView] reloadData];
+	}];
+
+	[[[self configurationViewModel] aggregatedStatus] subscribeNext:^(NSString *status) {
+		ChromaManager *chromaManager = [ChromaManager sharedInstance];
+		NSError *error;
+
+		if (![chromaManager connect:&error])
+		{
+			// TODO: Display popup (modal) dialogue with error localized string and resolution (if included).
+		}
+
+		if ([status isEqualToString:OCTCommitStatusStatePending])
+		{
+			[chromaManager activateProfileWithProfileId:[chromaManager buildingProfileId]];
+		}
+		else if ([status isEqualToString:OCTCommitStatusStateError] || [status isEqualToString:OCTCommitStatusStateFailure])
+		{
+			[chromaManager activateProfileWithProfileId:[chromaManager failureProfileId]];
+		}
+		else
+		{
+			[chromaManager activateProfileWithProfileId:[chromaManager successProfileId]];
+		}
+
+		// NOTE: We always want to disconnect when we're done (means users can go and open Razer Synapse whilst we're running).
+		[chromaManager disconnect];
 	}];
 
 	[[[self projectBuildListViewModel] refreshProjectBuildStatuses] subscribeNext:^(id x) {}];

@@ -10,12 +10,12 @@
 #import "ProjectBuildListViewModel.h"
 #import "AppDelegate.h"
 #import "WebHookManager.h"
-#import "ChromaManager.h"
-#import "ProjectBuildViewModel.h"
 
 static NSString *const ProjectBuildListKey = @"ProjectBuildList";
 
 @interface ConfigurationViewModel ()
+
+@property (nonatomic, strong) RACSubject *aggregatedStatus;
 
 @property (nonatomic, strong) Configuration *configuration;
 
@@ -140,13 +140,19 @@ static NSString *const ProjectBuildListKey = @"ProjectBuildList";
 
 		connectWebHooks(nil);
 
-		[self setupBuildLight];
+		[self setAggregatedStatus:[[RACSubject alloc] init]];
+		[self monitorAggregatedStatus];
 	}
 
 	return self;
 }
 
-- (void)setupBuildLight
+- (void)dealloc
+{
+	[(RACSubject *)[self aggregatedStatus] sendCompleted];
+}
+
+- (void)monitorAggregatedStatus
 {
 	ProjectBuildList *projectBuildList = [[self configuration] projectBuildList];
 	NSMutableArray *statusChangeSignals = [NSMutableArray array];
@@ -205,31 +211,9 @@ static NSString *const ProjectBuildListKey = @"ProjectBuildList";
 	}
 
 	[[combinedStatus takeUntil:projectBuildListChanged] subscribeNext:^(NSString *status) {
-		ChromaManager *chromaManager = [ChromaManager sharedInstance];
-		NSError *error;
-
-		if (![chromaManager connect:&error])
-		{
-			// TODO: Display popup (modal) dialogue with error localized string and resolution (if included).
-		}
-
-		if ([status isEqualToString:OCTCommitStatusStatePending])
-		{
-			[chromaManager activateProfileWithProfileId:[chromaManager buildingProfileId]];
-		}
-		else if ([status isEqualToString:OCTCommitStatusStateError] || [status isEqualToString:OCTCommitStatusStateFailure])
-		{
-			[chromaManager activateProfileWithProfileId:[chromaManager failureProfileId]];
-		}
-		else
-		{
-			[chromaManager activateProfileWithProfileId:[chromaManager successProfileId]];
-		}
-
-		// NOTE: We always want to disconnect when we're done (means users can go and open Razer Synapse whilst we're running).
-		[chromaManager disconnect];
+		[(RACSubject *)[self aggregatedStatus] sendNext:status];
 	} completed:^() {
-		[weak_self setupBuildLight];
+		[weak_self monitorAggregatedStatus];
 	}];
 }
 
