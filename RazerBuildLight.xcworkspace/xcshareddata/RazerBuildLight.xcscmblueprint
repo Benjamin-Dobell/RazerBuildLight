@@ -1,4 +1,5 @@
 {
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "9DB9F605FDB68F58D331FEC6E0FA0754C9AF700F",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
 
   },
@@ -9,6 +10,7 @@
     "ABB939127996C66F7E852A780552ADEEF03C6B13" : 0,
     "51B210D0D41486D3ADD6940D57E4480BBD4DE4C5" : 0,
     "F4E0D01C239078022205F5EFE09E8AB524DA87ED" : 0,
+    "9DB9F605FDB68F58D331FEC6E0FA0754C9AF700F" : 0,
     "E084C86B03F81D63323C9E7510697EA528A758C7" : 0,
     "DD20A1A48C66B5213E0FEBB87A95EF51D6C6F3E8" : 0,
     "50AFCD9D53A9FB83CBF68FF705CDFC914D3CD1BD" : 0
@@ -21,6 +23,7 @@
     "ABB939127996C66F7E852A780552ADEEF03C6B13" : "RazerBuildLight\/SocketRocket\/",
     "51B210D0D41486D3ADD6940D57E4480BBD4DE4C5" : "RazerBuildLight\/octokit.objc\/Carthage\/Checkouts\/ReactiveCocoa\/",
     "F4E0D01C239078022205F5EFE09E8AB524DA87ED" : "RazerBuildLight\/octokit.objc\/",
+    "9DB9F605FDB68F58D331FEC6E0FA0754C9AF700F" : "RazerBuildLight\/",
     "E084C86B03F81D63323C9E7510697EA528A758C7" : "RazerBuildLight\/octokit.objc\/Carthage\/Checkouts\/ReactiveCocoa\/Carthage\/Checkouts\/xcconfigs\/",
     "DD20A1A48C66B5213E0FEBB87A95EF51D6C6F3E8" : "RazerBuildLight\/octokit.objc\/External\/AFNetworking\/",
     "50AFCD9D53A9FB83CBF68FF705CDFC914D3CD1BD" : "RazerBuildLight\/GERazerKit\/"
@@ -48,6 +51,11 @@
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/ReactiveCocoa\/ReactiveCocoa.git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "51B210D0D41486D3ADD6940D57E4480BBD4DE4C5"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:Benjamin-Dobell\/RazerBuildLight.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "9DB9F605FDB68F58D331FEC6E0FA0754C9AF700F"
     },
     {
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/square\/SocketRocket.git",
