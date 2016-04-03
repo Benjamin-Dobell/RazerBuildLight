@@ -118,7 +118,7 @@
 		[[weak_self tableView] reloadDataForRowIndexes:[NSIndexSet indexSetWithIndex:rowIndex] columnIndexes:allColumns];
 	}];
 
-	[[[self configurationViewModel] aggregatedStatus] subscribeNext:^(NSString *status) {
+	[[[[self configurationViewModel] aggregatedStatus] deliverOn:[RACScheduler mainThreadScheduler]] subscribeNext:^(NSString *status) {
 		ChromaManager *chromaManager = [ChromaManager sharedInstance];
 		NSError *error;
 
@@ -164,14 +164,14 @@
 
 	if ([[tableColumn identifier] isEqualToString:@"project"])
 	{
-		[[RACObserve(viewModel, title) takeUntil:cell.rac_prepareForReuseSignal] subscribeNext:^(NSString *title) {
+		[[[RACObserve(viewModel, title) takeUntil:cell.rac_prepareForReuseSignal] deliverOn:[RACScheduler mainThreadScheduler]] subscribeNext:^(NSString *title) {
 			__strong NSTableCellView *strong_cell = weak_cell;
 			[[strong_cell textField] setStringValue:title];
 		}];
 	}
 	else if ([[tableColumn identifier] isEqualToString:@"status"])
 	{
-		[[RACObserve(viewModel, status) takeUntil:cell.rac_prepareForReuseSignal] subscribeNext:^(NSString *status) {
+		[[[RACObserve(viewModel, status) takeUntil:cell.rac_prepareForReuseSignal] deliverOn:[RACScheduler mainThreadScheduler]] subscribeNext:^(NSString *status) {
 			__strong NSTableCellView *strong_cell = weak_cell;
 
 			if ([status length] == 0)

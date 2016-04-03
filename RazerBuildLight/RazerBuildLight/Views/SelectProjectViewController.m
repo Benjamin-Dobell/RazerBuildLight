@@ -69,14 +69,14 @@
 
 	if ([[tableColumn identifier] isEqualToString:@"project"])
 	{
-		[[RACObserve(viewModel, title) takeUntil:cell.rac_prepareForReuseSignal] subscribeNext:^(NSString *title) {
+		[[[RACObserve(viewModel, title) takeUntil:cell.rac_prepareForReuseSignal] deliverOn:[RACScheduler mainThreadScheduler]] subscribeNext:^(NSString *title) {
 			__strong NSTableCellView *strong_cell = weak_cell;
 			[[strong_cell textField] setStringValue:title];
 		}];
 	}
 	else if ([[tableColumn identifier] isEqualToString:@"status"])
 	{
-		[[RACObserve(viewModel, status) takeUntil:cell.rac_prepareForReuseSignal] subscribeNext:^(NSString *status) {
+		[[[RACObserve(viewModel, status) takeUntil:cell.rac_prepareForReuseSignal] deliverOn:[RACScheduler mainThreadScheduler]] subscribeNext:^(NSString *status) {
 			__strong NSTableCellView *strong_cell = weak_cell;
 			[[strong_cell textField] setStringValue:status];
 		}];
