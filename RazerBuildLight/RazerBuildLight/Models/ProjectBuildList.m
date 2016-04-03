@@ -87,8 +87,11 @@ static NSString *const ProjectBuildsKey = @"projectBuilds";
 {
 	[(RACSubject *)[self projectBuildAdded] sendCompleted];
 	[(RACSubject *)[self projectBuildRemoved] sendCompleted];
+	[(RACSubject *)[self projectBuildChanged] sendCompleted];
+
 	[(RACSubject *)[self projectBuildAddedAtIndex] sendCompleted];
 	[(RACSubject *)[self projectBuildRemovedAtIndex] sendCompleted];
+	[(RACSubject *)[self projectBuildChangedAtIndex] sendCompleted];
 }
 
 - (void)encodeWithCoder:(NSCoder *)coder
