@@ -105,7 +105,15 @@ NSString *const WebHookManagerErrorDomain = @"au.com.glassechidna.RazerBuildLigh
 		RACSignal *hookDataSignal = [[[self hookSubject] filter:^BOOL(NSDictionary *message) {
 			return [message[@"id"] isEqualToString:hookId];
 		}] map:^id(NSDictionary *message) {
-			return message[@"data"];
+			NSDictionary *data = message[@"data"];
+
+			if (data[@"payload"])
+			{
+				NSData *payloadData = [data[@"payload"] dataUsingEncoding:NSUTF8StringEncoding];
+				data = [NSJSONSerialization JSONObjectWithData:payloadData options:0 error:NULL];
+			}
+
+			return data;
 		}];
 
 		[subscriber sendNext:hookDataSignal];
