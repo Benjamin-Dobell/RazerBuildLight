@@ -205,7 +205,6 @@ static NSString *const ProjectBuildListKey = @"ProjectBuildList";
 	{
 		combinedStatus = [RACSignal createSignal:^RACDisposable *(id <RACSubscriber> subscriber) {
 			[subscriber sendNext:OCTCommitStatusStateError];
-			[subscriber sendCompleted];
 			return nil;
 		}];
 	}
