@@ -15,6 +15,7 @@ NSString *const WebHookManagerErrorDomain = @"au.com.glassechidna.RazerBuildLigh
 
 @property (nonatomic, strong) NSMutableSet *monitoredHookIds;
 
+@property (nonatomic, assign, getter=isConnected) BOOL connected;
 @property (nonatomic, strong) RACSubject *connectSubject;
 @property (nonatomic, strong) RACSubject *hookSubject;
 
@@ -41,12 +42,15 @@ NSString *const WebHookManagerErrorDomain = @"au.com.glassechidna.RazerBuildLigh
 		[[self monitoredHookIds] addObject:hookId];
 	}
 
-	NSDictionary *registerDictionary = @{
-		@"type": @"register",
-		@"id": hookId
-	};
-	NSData *data = [NSJSONSerialization dataWithJSONObject:registerDictionary options:0 error:NULL];
-	[[self webSocket] send:data];
+	if ([self isConnected])
+	{
+		NSDictionary *registerDictionary = @{
+			@"type" : @"register",
+			@"id" : hookId
+		};
+		NSData *data = [NSJSONSerialization dataWithJSONObject:registerDictionary options:0 error:NULL];
+		[[self webSocket] send:data];
+	}
 }
 
 - (instancetype)init
@@ -145,6 +149,8 @@ NSString *const WebHookManagerErrorDomain = @"au.com.glassechidna.RazerBuildLigh
 		{
 			[self registerForHookWithId:hookId];
 		}
+
+		[self setConnected:YES];
 	}
 
 	[[self connectSubject] sendNext:nil];
