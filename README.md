@@ -2,6 +2,8 @@
 
 A simple Mac application to turn your Razer Chroma device into a build light.
 
+There is no official Razer SDK for OS X, so we're using our own, [GERazerKit](https://github.com/Benjamin-Dobell/GERazerKit).
+
 __Note:__ At present only the Mamba (Wireless) is officially supported, but pull requests are welcome.
 
 ## Build Prerequisites
